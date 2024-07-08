@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>MeuDestino.com</title>
+</head>
+<body>
+    <header>
+        <div class="header_titulo">
+            <img src="img/MEUDESTINO.png" alt="" onclick="redirectPage('index.html')">
+        </div>
+        <div class="pai_login">
+            <div class="login">
+                <div><img src="img/icon.pessoa.png" alt=""></div>
+                <button onclick="redirectPage('login.html')">Login</button>
+            </div>
+        </div>
+        <div class="navegacao-hd" id="navegacao-hd">
+            <div class="navegação-hearder">
+                <div class="pesquisa">
+                    <div class="filho-pesquisa">
+                        <div class="pai-input">
+                            <input type="text" name="pesquisa" id="pesquisa" class="input_pesquisa" placeholder="Escolha Seu Destino" autocomplete="off"> 
+                            <div id="res_pesquisa">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn_pesquisar_hearder"></button>
+            </div>
+        </div>
+        <div class="pai_login">
+
+        </div>
+    </header>
+    <div class="lading">
+        <div class="text-lading">
+            <h1>Escolha o Melhor <span>DESTINO</span> para você e sua familia</h1>
+            <p class="p-lading">Suas Aveturas começam aqui</p>
+            <button class="btn-explorar" id="scrollDownButton">Explorar</button>
+        </div>
+        <div class="lading_info">
+            <div id="lading_info_cdd">Cidade</div>
+            <div id="lading_info_pais">Pais</div>
+        </div>
+        <div class="pai_btn_lading">
+                <button value="0" class="btn_lading"></button>
+                <button value="1" class="btn_lading"></button>
+                <button value="2" class="btn_lading"></button>
+                <button value="3" class="btn_lading"></button>
+                <button value="4" class="btn_lading"></button>
+        </div>
+    </div>
+    <main>
+        <div class="pai-menu" id="menu">
+            <div class="titulo_menu">
+                <div class="icon_animation">
+                    <button id="botao_icon_menu"></button>
+                </div>
+            </div>
+            <div class="menu">
+               
+            </div>
+        </div>
+        <div class="base" id="base">
+            <div class="navegacao">
+                <div class="navegacao-cima">
+                    <div class="pesquisa">
+                        <div class="filho-pesquisa">
+                            <div class="pai-input">
+                                <input type="text" name="pesquisa" id="pesquisa_body" class="input_pesquisa" placeholder="Escolha Seu Destino" autocomplete="off"> 
+                                <div id="res_pesquisa_body">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn_menu">Pesquisar</button>
+                </div>
+            </div>
+            <div class="pai_carrosel">
+                <div class="titulo_carrosel">
+                    <p>Os Destinos <span>MAIS</span> Populares!!</p>
+                </div>
+                <div class="carrosel">
+                    <div class="btn_carrosel prev"><button onclick="btn_carrosel_mais(-1)" id="btn_carrosel_mais_ant">&lt;</button></div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/nwy1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais1">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel1_mais">New York</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel1_mais">Estado Unidos</div> 
+                                </div>
+                        </div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/sdn1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais2">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel2_mais">Sydney</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel2_mais">Austrália</div> 
+                                </div>
+                        </div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/tok1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais3">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel3_mais">Tokyo</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel3_mais">Japão</div> 
+                                </div>
+                        </div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/ldn1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais4">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel4_mais">Londres</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel4_mais">Reino Unido</div> 
+                                </div>
+                        </div>
+                    <div class="btn_carrosel next"><button onclick="btn_carrosel_mais(1)" id="btn_carrosel_mais_pro">&gt;</button></div>
+                </div>
+            </div>
+            <div class="pesquisa_avancada_titulo">Encontre o Destino perfeito</div>
+            <div class="pesquisa_avancada_corpo">com ajuda da nossa ferramenta de pesquisa</div>
+            <div class="navegacao_filtros_pai">
+                <div class="navegacao_filtros">
+                    <div class="pai_filtros">
+                        <label for="form_estilo">Estilo da viagem</label>
+                        <select name="" id="form_estilo">
+                            <option value="">Viagem em Familia</option>
+                            <option value="">Viagem Romantica</option>
+                            <option value="">Viagem de Negocios</option>
+                            <option value="">Viagem solo</option>
+                        </select>
+                        <label for="mostrar_opcoes">Qual o Objetivo da Viagem</label>
+                        <button id="mostrar_opcoes" class="btn_menu">Mostrar Opções</button>
+                    </div>
+                    <div class="checkbox">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="aventura" name="objetivo[]" value="aventura">
+                            <label for="aventura">Aventura</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="compras" name="objetivo[]" value="compras">
+                            <label for="compras">Compras</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="cultural" name="objetivo[]" value="cultural">
+                            <label for="cultural">Cultural</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="educacao" name="objetivo[]" value="educacao">
+                            <label for="educacao">Educação</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="esportiva" name="objetivo[]" value="esportiva">
+                            <label for="esportiva">Esportiva</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="gastronomica" name="objetivo[]" value="gastronomica">
+                            <label for="gastronomica">Gastronômica</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="passeio" name="objetivo[]" value="passeio">
+                            <label for="passeio">Passeio</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="relaxar" name="objetivo[]" value="relaxar">
+                            <label for="relaxar">Relaxar</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="shows_eventos" name="objetivo[]" value="shows_eventos">
+                            <label for="shows_eventos">Shows e Eventos</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="viagem_religiosa" name="objetivo[]" value="viagem_religiosa">
+                            <label for="viagem_religiosa">Viagem Religiosa</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="visita_familia" name="objetivo[]" value="visita_familia">
+                            <label for="visita_familia">Visitar a Família</label>
+                        </div>
+                        <button id="selecionar">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pai_carrosel">
+                <div class="titulo_carrosel">
+                    <p>Explore as maravilhas do <span>Brasil!!</span></p>
+                </div>
+                <div class="carrosel">
+                    <div class="btn_carrosel prev"><button onclick="btn_carrosel_mais(-1)" id="btn_carrosel_mais_ant">&lt;</button></div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/nwy1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais1">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel1_mais">New York</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel1_mais">Estado Unidos</div> 
+                                </div>
+                        </div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/sdn1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais2">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel2_mais">Sydney</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel2_mais">Austrália</div> 
+                                </div>
+                        </div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/tok1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais3">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel3_mais">Tokyo</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel3_mais">Japão</div> 
+                                </div>
+                        </div>
+                        <div class="caixa_carrosel">
+                            <img src="carrosel/ldn1.jpg" alt="" class="img_carrosel" id="img_carrosel_mais4">
+                                <div class="info_carrosel">
+                                    <div class="cdd_info_carrosel" id="cdd_info_carrosel4_mais">Londres</div>
+                                    <div class="pais_info_carrosel" id="pais_info_carrosel4_mais">Reino Unido</div> 
+                                </div>
+                        </div>
+                    <div class="btn_carrosel next"><button onclick="btn_carrosel_mais(1)" id="btn_carrosel_mais_pro">&gt;</button></div>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+        
+    <style>
+        	@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+</body>
+</html>

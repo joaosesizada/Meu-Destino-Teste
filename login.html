@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+    <title>MeuDestino.com</title>
+</head>
+<body>
+    <header>
+        <div class="back" onclick="redirectPage('index.html')">
+        </div>
+        <div class="header_titulo">
+            <img src="img/MEUDESTINO.png" alt="">
+        </div>
+    </header>
+    <div class="pai-login">
+        <div class="login">
+            <div class="conectesse">
+                <h2>Conecte-se</h2>
+                <div class="area_conectesse">
+                    <h3>Usuario</h3>
+                    <input type="email" name="" id="user_conect" placeholder="Insira Seu Email">
+                    <p id="alert_user_conect">*Insira um Email válido</p>
+                    <h3>Senha</h3>
+                    <input type="password" name="" id="password_conect" placeholder="Digite sua Senha">
+                    <div>
+                        <button id="conectar_se">Conectar-se</button>
+                    </div>
+                </div>
+            </div>
+            <div class="registre-se">
+                <h2>Criar Conta</h2>
+                <div class="area_registre-se">
+                    <div class="input_area">
+                        <h3>Nome</h3>
+                            <input type="text" name="" id="nome_user" placeholder="Insira Seu Nome de Usuario">
+                            <p id="nome_alert">*Seu nome deve ter pelo menos 4 caracteres</p>
+                        <h3>Email</h3>
+                        <div>
+                            <input type="email" name="" id="email"  placeholder="Insira Seu Email">
+                            <p id="alert_email_registre-se">insira um e-mail valido</p>
+                        </div>
+                        <h3>Senha</h3>
+                        <div>
+                            <input type="password" name="" id="password" placeholder="Digite Sua Senha">
+                            <div class="caixa_exigencia">
+                                <p id="password_exigencia_maiuscula">*Sua senha deve ter pelo menos uma letra Maiuscula</p>
+                                <p id="password_exigencia_num">*Sua senha deve ter pelo menos um numero e mais de 6 caracteres</p>
+                            </div>
+                        </div>
+                        <h3>Confirme sua Senha</h3>
+                        <input type="password" name="" id="confirme" placeholder="Confirme Sua Senha">
+                        <p id="password_confirm">Verifique sua senha</p>
+                    </div>
+                    <div>
+                        <button id="registre_se">Registrar-se</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+</body>
+</html>

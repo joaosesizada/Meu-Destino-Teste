@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --corPrincipal: #ff4d00;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 206, 206);
+    font-family: 'TT Hoves Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background-color: var(--corPrincipal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+h2 {
+    font-size: 38px;
+}
+.back {
+    display: flex;
+    position: absolute;
+    z-index: 1001;  
+    left: 2%;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    background-image: url("img/back.icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.pai-login {
+    text-align: center;
+    width: 1000px;
+    height: 650px;
+    background-color: white;
+    border-radius: 20px; /* Aplica o border-radius ao lado de fora */
+    overflow: hidden; /* Garante que o conteúdo interno não ultrapasse os cantos arredondados */
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.conectesse {
+    width: 500px;
+    height: 650px;
+    background-color: var(--corPrincipal);
+    padding-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+}
+
+.area_conectesse {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* Ajusta o espaçamento entre os elementos */
+}
+
+.area_conectesse h3 {
+    display: flex;
+}
+
+.area_conectesse input {
+    width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.area_conectesse button {
+    margin-top: 40px;
+    width: 150px;
+    background-color: white;
+    border: none;
+    color: var(--corPrincipal);
+    padding: 10px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+#conectar_se:disabled {
+    background-color: #cccccc;
+    color: #888787;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.registre-se {
+    height: 650px;
+    background-color: white;
+}
+.area_registre-se {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px; /* Ajusta o espaçamento entre os elementos */
+}
+
+.area_registre-se input {
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.area_registre-se h3 {
+    display: flex;
+    margin-left: 100px;
+}
+
+#alert_user_conect {
+    display: none;
+    margin-right: 150px;
+}
+
+#nome_alert{
+    color: red;
+    margin-right: 20px;
+    display: none;
+}
+
+#alert_email_registre-se {
+    display: flex;
+    margin-right: 140px;
+    margin-bottom: 5px;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+.caixa_exigencia {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 100px;
+    width: 300px;
+    color: red;
+    display: none;
+}
+
+#password_exigencia_maiuscula {
+    color: red;
+}
+
+#password_exigencia_num {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#password_confirm {
+    display: flex;
+    display: none;
+    color: red;
+    font-weight: bold;
+    margin-right: 165px
+}
+
+.area_registre-se button {
+    margin-top: 40px;
+    width: 150px;
+    color: white;
+    border: none;
+    background-color: var(--corPrincipal);
+    padding: 10px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#registre_se:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.registre-se {
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    padding-top: 40px;
+    color: var(--corPrincipal);
+}
